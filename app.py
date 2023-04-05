@@ -1,13 +1,11 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 
 @app.route("/")
 def hello_world():
-  return "Hello World"
-
-  print(__name__)
+  return render_template('home.html')
 
 
 # Code to have it run on the local development server
